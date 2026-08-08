@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     SplitwiseManager manager;
 
-    auto user1 = make_shared<User>("u1", "Divyang");
+    auto user1 = make_shared<User>("u1", "Anjali");
     auto user2 = make_shared<User>("u2", "Rahul");
     auto user3 = make_shared<User>("u3", "Aditi");
 
@@ -29,7 +29,7 @@ int main() {
 
     manager.addExpense(1000, "u1", splits1);
 
-    cout << "--- Balances after Divyang pays 1000 ---" << endl;
+    cout << "--- Balances after Anjali pays 1000 ---" << endl;
     manager.showAllBalances();
     cout << endl;
 
