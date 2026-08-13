@@ -6,16 +6,18 @@
 #include "../models/User.h"
 #include "../models/Split.h"
 
+using namespace std;
+
 class SplitwiseManager {
 private:
-    std::unordered_map<std::string, std::shared_ptr<User>> users;
-    std::unordered_map<std::string, std::unordered_map<std::string, double>> balanceSheet;
+    unordered_map<string, shared_ptr<User>> users;
+    unordered_map<string, unordered_map<string, double>> balanceSheet;
 
-    void printBalance(std::string user1, std::string user2, double amount);
+    void printBalance(string user1, string user2, double amount);
 
 public:
-    void addUser(std::shared_ptr<User> user);
-    void addExpense(double totalAmount, std::string paidBy, const std::vector<std::shared_ptr<Split>>& splits);
-    void showBalance(std::string userId);
+    void addUser(shared_ptr<User> user);
+    void addExpense(double totalAmount, string paidBy, const vector<shared_ptr<Split>>& splits);
+    void showBalance(string userId);
     void showAllBalances();
 };
